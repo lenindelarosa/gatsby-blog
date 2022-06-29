@@ -1,11 +1,13 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import styled from 'styled-components'
-import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage, GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
+import { Image } from "react-bootstrap"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
+
 
 // const links = [
 //   {
@@ -96,6 +98,8 @@ const IndexPage =  ({ data }) => (
 
       You can also contact me <ContactLink href="mailto:leninmanueld@gmail.com">here!</ContactLink>
       </p>
+
+      <StaticImage image="../images/fido.jpeg"  alt="fido" />
       {
         data.allMarkdownRemark.edges.map(({ node })=> (
           <div key={node.id}>
@@ -103,6 +107,7 @@ const IndexPage =  ({ data }) => (
               <BlogTitle>
                 {node.frontmatter.title}
               </BlogTitle>
+              <Image src={node.frontmatter.imageUrl} alt={node.frontmatter.title} fluid/>
             </BlogLink>
             <p>{node.excerpt}</p>
           </div>
@@ -122,9 +127,9 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            description
             title
             date
+            imageUrl
           }
           fields {
             slug
