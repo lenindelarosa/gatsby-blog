@@ -1,12 +1,11 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import styled from 'styled-components'
-import { StaticImage, GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import { Image } from "react-bootstrap"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
+
 
 
 // const links = [
@@ -70,7 +69,7 @@ import * as styles from "../components/index.module.css"
 //   { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
 // ]
 
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+// const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const BlogLink = styled(Link)`
   text-decoration: none;
@@ -94,12 +93,13 @@ const IndexPage =  ({ data }) => (
       <p>
       My name is Lenin and I'm currently working in becoming a fullstack web developer. As a part of my programming practices I'm making this blog with Gatsby to display my favorite animals. As a heads up, I'm a dog person, love sea animals and birds, well that covers a lot! Hope you enjoy it!
 
+      PS: this is a blog in progress... 😊
+
       If you want, you can check my linkedIn profile with the following <ContactLink href="https://www.linkedin.com/in/lenindelarosa/">link.</ContactLink>
 
       You can also contact me <ContactLink href="mailto:leninmanueld@gmail.com">here!</ContactLink>
       </p>
 
-      <StaticImage image="../images/fido.jpeg"  alt="fido" />
       {
         data.allMarkdownRemark.edges.map(({ node })=> (
           <div key={node.id}>
@@ -107,7 +107,7 @@ const IndexPage =  ({ data }) => (
               <BlogTitle>
                 {node.frontmatter.title}
               </BlogTitle>
-              <Image src={node.frontmatter.imageUrl} alt={node.frontmatter.title} fluid/>
+              <Image src={node.frontmatter.imageUrl} alt={node.frontmatter.title} fluid rounded/>
             </BlogLink>
             <p>{node.excerpt}</p>
           </div>
@@ -135,6 +135,11 @@ export const query = graphql`
             slug
           }
           excerpt
+          children {
+            ... on ImageSharp {
+              gatsbyImageData
+            }
+          }
         }
       }
     }

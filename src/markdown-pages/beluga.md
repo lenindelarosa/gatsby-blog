@@ -1,7 +1,7 @@
 ---
 title: "Beluga"
 date: "2022-06-29"
-imageUrl: https://50a8d2.medialib.edu.glogster.com/Z2d5cY4XCjo4h5bZ3wI0/media/c9/c98926a216606f40bf994338382289c52fef1584/beluga-whale.jpg
+imageUrl: "https://50a8d2.medialib.edu.glogster.com/Z2d5cY4XCjo4h5bZ3wI0/media/c9/c98926a216606f40bf994338382289c52fef1584/beluga-whale.jpg"
 ---
 
 These whales that are normally white are just marvelous! They are just so beautiful with a smiling face and really smart. Unlike other cetaceans they do not have a dorsal fin which helps them to easily swim in ice, which is their habitat (the artic ocean and north countries). 
