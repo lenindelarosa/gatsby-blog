@@ -104,10 +104,6 @@ const IndexPage =  ({ data }) => (
           My name is Lenin and I'm currently working in becoming a fullstack web developer. As a part of my programming practices I'm making this blog with Gatsby to display my favorite animals. As a heads up, I'm a dog person, love sea animals and birds, well that covers a lot! Hope you enjoy it!
           <br/> <br/>
           PS: this is a blog in progress... 😊
-          <br/> <br/>
-          If you want, you can check my linkedIn profile with the following <ContactLink href="https://www.linkedin.com/in/lenindelarosa/">link.</ContactLink>
-          <br/> <br/>
-          You can also contact me <ContactLink href="mailto:leninmanueld@gmail.com">here!</ContactLink>
         </p>
 
         {
