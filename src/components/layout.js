@@ -9,8 +9,18 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import "./layout.css"
+import Header from "./header";
+import "./layout.css";
+import NavBar from "./navbar";
+import styled from 'styled-components';
+
+const PageContainer = styled.div`
+  background-color: #fcfcfc;
+  opacity: 1;
+  background-image:  radial-gradient(#20bb15 1.4500000000000002px, transparent 1.4500000000000002px), radial-gradient(#20bb15 1.4500000000000002px, #fcfcfc 1.4500000000000002px);
+  background-size: 58px 58px;
+  background-position: 0 0,29px 29px;
+`;
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,28 +34,29 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <PageContainer>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
+      <NavBar />
+        <div
           style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
+            margin: `0 auto`,
+            maxWidth: `var(--size-content)`,
+            padding: `var(--size-gutter)`,
           }}
         >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
+          <main>{children}</main>
+          <footer
+            style={{
+              marginTop: `var(--space-5)`,
+              fontSize: `var(--font-sm)`,
+            }}
+          >
+            © {new Date().getFullYear()} &middot; Built with
+            {` `}
+            <a href="https://www.gatsbyjs.com">Gatsby</a>
+          </footer>
+        </div>
+      </PageContainer>
   )
 }
 
@@ -53,4 +64,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default Layout;

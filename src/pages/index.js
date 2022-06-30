@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import Layout from "../components/layout"
 import { Image } from "react-bootstrap"
 import Seo from "../components/seo"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'mdb-ui-kit/css/mdb.min.css';
 
 
 
@@ -73,48 +75,56 @@ import Seo from "../components/seo"
 
 const BlogLink = styled(Link)`
   text-decoration: none;
+  color: black;
 `;
 
 const BlogTitle = styled.h3`
   margin-bottom: 20px;
-  color: inherit;
+  color: black;
 `;
 
 const ContactLink = styled.a`
 text-decoration: none;
+color: black;
 `;
 
+const CustomImage = styled(Image)`
+  width: 50%;
+  height: auto;
+`;
+
+
+
 const IndexPage =  ({ data }) => (
-  <Layout>    
-    <Seo title="Home" />
-    <div>
-      <h1> Lenin's animals blog! 🦮 🦅 🐬 </h1>
+    <Layout>
+      <Seo title="Home" />
+      <div>
+        {/* <h1> Lenin's animals blog! 🦮 🦅 🐬 </h1> */}
+        <p>
+          My name is Lenin and I'm currently working in becoming a fullstack web developer. As a part of my programming practices I'm making this blog with Gatsby to display my favorite animals. As a heads up, I'm a dog person, love sea animals and birds, well that covers a lot! Hope you enjoy it!
+          <br/> <br/>
+          PS: this is a blog in progress... 😊
+          <br/> <br/>
+          If you want, you can check my linkedIn profile with the following <ContactLink href="https://www.linkedin.com/in/lenindelarosa/">link.</ContactLink>
+          <br/> <br/>
+          You can also contact me <ContactLink href="mailto:leninmanueld@gmail.com">here!</ContactLink>
+        </p>
 
-      <p>
-      My name is Lenin and I'm currently working in becoming a fullstack web developer. As a part of my programming practices I'm making this blog with Gatsby to display my favorite animals. As a heads up, I'm a dog person, love sea animals and birds, well that covers a lot! Hope you enjoy it!
-
-      PS: this is a blog in progress... 😊
-
-      If you want, you can check my linkedIn profile with the following <ContactLink href="https://www.linkedin.com/in/lenindelarosa/">link.</ContactLink>
-
-      You can also contact me <ContactLink href="mailto:leninmanueld@gmail.com">here!</ContactLink>
-      </p>
-
-      {
-        data.allMarkdownRemark.edges.map(({ node })=> (
-          <div key={node.id}>
-            <BlogLink to={node.fields.slug}>
-              <BlogTitle>
-                {node.frontmatter.title}
-              </BlogTitle>
-              <Image src={node.frontmatter.imageUrl} alt={node.frontmatter.title} fluid rounded/>
-            </BlogLink>
-            <p>{node.excerpt}</p>
-          </div>
-        ))
-      }
-    </div>
-  </Layout>
+        {
+          data.allMarkdownRemark.edges.map(({ node })=> (
+            <div key={node.id}>
+              <BlogLink to={node.fields.slug}>
+                <BlogTitle>
+                  {node.frontmatter.title}
+                </BlogTitle>
+                <CustomImage src={node.frontmatter.imageUrl} alt={node.frontmatter.title} fluid rounded/>
+              </BlogLink>
+              <p>{node.excerpt}</p>
+            </div>
+          ))
+        }
+      </div>
+    </Layout>
 )
 
 export default IndexPage;
@@ -135,11 +145,6 @@ export const query = graphql`
             slug
           }
           excerpt
-          children {
-            ... on ImageSharp {
-              gatsbyImageData
-            }
-          }
         }
       }
     }
