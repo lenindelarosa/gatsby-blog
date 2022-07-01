@@ -13,7 +13,7 @@ These birds are tremendously beautiful and their playfulness amazes me! They are
 And here's a short video with some story backgroung about this specie. 
 
 <div style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;">
-   <iframe style="position: absolute; top: 0;left: 0; width: 85%; height: 100%;" src="https://www.youtube.com/embed/nbmzE3flflY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   <iframe style="position: absolute; top: 0;left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/nbmzE3flflY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 
