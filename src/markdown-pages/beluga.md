@@ -12,8 +12,4 @@ I love seeing the belugas in their natural habitat, being free and happy! I do n
 
 Here's a look at a funny video of a wild beluga playing:
 
-<center>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NQ3sAIEg6OY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-</center>
+<iframe width="440" height="315" src="https://www.youtube.com/embed/NQ3sAIEg6OY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -32,6 +32,7 @@ html {
   font-size: var(--font-md);
   line-height: var(--line-height-normal);
   overflow-y: scroll;
+  min-height: 650px;
 }
 body {
   -moz-osx-font-smoothing: grayscale;
@@ -42,6 +43,7 @@ body {
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
+  height: 650px;
 }
 a {
   background-color: transparent;

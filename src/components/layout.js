@@ -20,6 +20,7 @@ const PageContainer = styled.div`
   background-image:  radial-gradient(#20bb15 1.4500000000000002px, transparent 1.4500000000000002px), radial-gradient(#20bb15 1.4500000000000002px, #fcfcfc 1.4500000000000002px);
   background-size: 58px 58px;
   background-position: 0 0,29px 29px;
+  min-height: 650px;
 `;
 
 const Layout = ({ children }) => {
@@ -49,6 +50,10 @@ const Layout = ({ children }) => {
             style={{
               marginTop: `var(--space-5)`,
               fontSize: `var(--font-sm)`,
+              // position: `absolute`,
+              // bottom: `0`,
+              // width: `100%`,
+              // height: `2.5rem`,
             }}
           >
             © {new Date().getFullYear()} &middot; Built with

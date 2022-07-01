@@ -8,16 +8,8 @@ These birds are tremendously beautiful and their playfulness amazes me! They are
 
 #### Sulphur-Crested Cockatoo
 
-<center>
-
-   ![alt text](https://media.australian.museum/media/dd/images/sulphur-crested_cockatoo.81ff5dc.width-1200.1e450b9.jpg "Sulphur-Crested Cockatoo")
-
-</center>
+   ![alt text](https://www.worldlifeexpectancy.com/images/a/w/b/cacatua-galerita/cacatua-galerita.jpg "Sulphur-Crested Cockatoo")
 
 And here's a short video with some story backgroung about this specie. 
 
-<center>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nbmzE3flflY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-</center>
+<iframe width="440" height="315" src="https://www.youtube.com/embed/nbmzE3flflY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

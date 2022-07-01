@@ -12,7 +12,7 @@ import {
 
 const Contact = () => (
     <Layout>
-      <Seo title="Page two" />
+      <Seo title="Contact me" />
       <h1>Contact information</h1>
       
       <p>If you are interested in talking with me, I put here below my social medias. I don't bite! </p>
@@ -34,8 +34,8 @@ const Contact = () => (
           <FontAwesomeIcon icon={faGithub} size="2x" />
           &nbsp; 
       </a>
-  <br/>
-  <br/>
+      <br/>
+      <br/>
       <Link to="/">Go back to the homepage</Link>
     </Layout>
 )

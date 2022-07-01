@@ -6,9 +6,6 @@ import Layout from "../components/layout"
 import { Image } from "react-bootstrap"
 import Seo from "../components/seo"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'mdb-ui-kit/css/mdb.min.css';
-
-
 
 // const links = [
 //   {
@@ -81,11 +78,6 @@ const BlogLink = styled(Link)`
 const BlogTitle = styled.h3`
   margin-bottom: 20px;
   color: black;
-`;
-
-const ContactLink = styled.a`
-text-decoration: none;
-color: black;
 `;
 
 const CustomImage = styled(Image)`
